@@ -3,10 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/user-prefs.css">
   <title>User prefs</title>
 </head>
 <body>
+  <section class="form-container">
+    <header class="form-header">
+      <h2> Your details </h2>
+    </header>
+    <form class="form-main" onsubmit="onSubmitClicked(event)">
+      <div class="name-div">
+        <label for="name"> Name: </label>
+        <input type="text" id="name" name="name"/>
+      </div>
+      <div class="color-div">
+        <label for="color"> Change background color of page </label>
+        <input type="color" id="color" name="user-favorite-color" onchange="changeBackgroundColor(this)">
+      </div>
+      <div class="color-birthday-div">
+        <label for="Birthday">Date of Birth:</label>
+        <input type="date" id="Birthday" name="Birthday" required/>
+      </div>
+      <div class="time-div">
+        <label for="time">Time of birth:</label>
+        <input type="time" id="time" name="time" required />
+      </div>
+      <div class="email-div">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="range-div">
+        <label for="age">Your age:</label>
+        <input type="range" id="age" name="age" min="18" max="120" value="18" required onchange="onChangeAge(this.value)"/> <span class="age-txt"> 18 </span>
+      </div>
+      <button class="submit-button"> Submit</button>
+    </form>
+  </section>
+
   <script src="js/util-service.js"></script>
   <script src="js/storage-service.js"></script>
   <script src="js/user-prefs-service.js"></script>
