@@ -3,10 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/map.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <title>Map</title>
 </head>
 <body>
+  <div class="container">
+    <header class="header">
+      <h1> Managed your places 🗺 </h1>
+    </header>
+    <main class="main-container">
+      <div class="map">
 
+      </div>
+      <div class="places-container">
+        <ul class="places">
+          <li class="place-details">
+            <div class="icon">Q</div>
+            <div class="place-name">
+              <div class="place">work</div>
+              <div class="address">bosmat 7</div>
+            </div>
+            <div class="delete" onclick="onDeletePlace()"><i class="fas fa-trash-alt"></i></div>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </div>
+  <script src="js/util-service.js"></script>
+  <script src="js/storage-service.js"></script>
+  <script src="js/map-service.js"></script>
+  <script src="js/map-controller.js"></script>
 </body>
 </html>

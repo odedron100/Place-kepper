@@ -1,0 +1,77 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ body {
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+}
+
+.header h1{
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.container{
+  height: 100%;
+}
+
+.main-container{
+  display: flex;
+  height: 60vh;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.main-container .map{
+  background-color: red;
+  flex-basis: 50%;
+}
+
+.places-container{
+  background-color: rgb(47, 82, 19);
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.places-container .places{
+  justify-content: flex-start;
+  list-style:none;
+}
+
+.places-container .places .place-details{
+  display: flex;
+}
+
+.places-container .places .place-details .icon{
+  flex-grow: 1;
+}
+
+.places-container .places .place-details .delete{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+.places-container .places .place-details .place-name{
+  flex-grow: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.places-container .places .place-details .place-name .place{
+  font-weight: 700;
+}
+
+.places-container .places .place-details .place-name .address{
+  color: rgb(152, 152, 152);
+}
