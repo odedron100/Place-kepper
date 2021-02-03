@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <title>Map</title>
 </head>
-<body>
+<body onload="getPosition()">
   <div class="container">
     <header class="header">
       <h1> Managed your places 🗺 </h1>
@@ -32,6 +32,9 @@
     </main>
   </div>
   <script src="js/util-service.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB00l9MonZLr7WMMVv1QPChmMo9WpTxpE8&callback=mapReady">
+  </script>
   <script src="js/storage-service.js"></script>
   <script src="js/map-service.js"></script>
   <script src="js/map-controller.js"></script>

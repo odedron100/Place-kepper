@@ -43,7 +43,7 @@ const openModal = () => {
 }
 
 
-function closeModal() {
+const closeModal = () => {
   var elModal = document.querySelector('.forecast-modal');
   elModal.classList.remove('visible');
 }
