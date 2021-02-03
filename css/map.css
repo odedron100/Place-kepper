@@ -27,16 +27,18 @@
 }
 
 .main-container .map{
-  background-color: red;
+  background-color: rgba(95, 104, 109, 0.44);
   flex-basis: 50%;
+  padding: 20px;
 }
 
 .places-container{
-  background-color: rgb(47, 82, 19);
+  background-color: rgb(67, 70, 75);
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 20px;
 }
 
 .places-container .places{
@@ -58,6 +60,10 @@
   justify-content: center;
   align-items: center;
   font-size: 20px;
+}
+
+.places-container .places .place-details .delete:hover{
+  cursor: pointer;
 }
 
 .places-container .places .place-details .place-name{
