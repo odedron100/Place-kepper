@@ -8,7 +8,29 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <title>Map</title>
 </head>
-<body onload="getPosition()">
+<!-- <script>
+  function initMap(lat, lng) {
+                       if (!lat) lat = 29.55805;
+                       if (!lng) lng =  34.94821;
+            var elMap = document.querySelector('.map');
+            var options = {
+                center: { lat, lng },
+                zoom: 16
+            };
+
+            var map = new google.maps.Map(
+                elMap,
+                options
+            );
+
+            var marker = new google.maps.Marker({
+                position: { lat, lng },
+                map,
+                title: 'Hello World!'
+            });
+        }
+</script> -->
+<body onload="initMap()">
   <div class="container">
     <header class="header">
       <h1> Managed your places 🗺 </h1>
@@ -31,10 +53,10 @@
       </div>
     </main>
   </div>
-  <script src="js/util-service.js"></script>
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB00l9MonZLr7WMMVv1QPChmMo9WpTxpE8&callback=mapReady">
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB00l9MonZLr7WMMVv1QPChmMo9WpTxpE8">
   </script>
+  <script src="js/util-service.js"></script>
   <script src="js/storage-service.js"></script>
   <script src="js/map-service.js"></script>
   <script src="js/map-controller.js"></script>
