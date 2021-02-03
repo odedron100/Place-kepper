@@ -5,7 +5,7 @@ const changeBackgroundColor = (el) => {
 }
 
 const onChangeAge = (val) => {
-  var elAge = document.querySelector('.age-txt');
+  let elAge = document.querySelector('.age-txt');
   elAge.innerHTML = val;
 }
 
@@ -27,4 +27,23 @@ const onSubmitClicked = (ev) => {
   document.querySelector('[name = time]').value = '';
   document.querySelector('[name = email]').value = '';
   document.querySelector('[name = age]').value = '18';
+  window.location.href = 'map.html';
+}
+
+const onShowForecast = () => {
+  openModal();
+}
+
+const openModal = () => {
+  var elModal = document.querySelector('.forecast-modal');
+  var forecastTxt = getForecast();
+  elModal.querySelector('h2').innerHTML = 'Forecast';
+  document.querySelector('.forecast-modal p').innerHTML = forecastTxt;
+  elModal.classList.add('visible');
+}
+
+
+function closeModal() {
+  var elModal = document.querySelector('.forecast-modal');
+  elModal.classList.remove('visible');
 }

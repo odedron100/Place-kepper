@@ -27,7 +27,7 @@
       </div>
       <div class="time-div">
         <label for="time">Time of birth:</label>
-        <input type="time" id="time" name="time" required />
+        <input type="time" id="time" name="time" required onchange="onShowForecast()"/>
       </div>
       <div class="email-div">
         <label for="email">Email:</label>
@@ -40,6 +40,15 @@
       <button class="submit-button"> Submit</button>
     </form>
   </section>
+
+  <div class="forecast-modal">
+    <div class="modal">
+      <div class="close-modal" onclick="closeModal()">❌</div>
+      <h2>  </h2>
+      <p>  </p>
+      </div>
+    </div>
+  </div>
 
   <script src="js/util-service.js"></script>
   <script src="js/storage-service.js"></script>
